@@ -1,0 +1,126 @@
+:root{
+    --base-color: hsl(179, 62%, 43%);
+    --base-twin: hsl(179, 51%, 57%);
+    --accent-color:hsl(71, 73%, 54%);
+    --base-dark: hsl(218, 22%, 67%);
+    --base-light: hsl(204, 43%, 93%);
+    --border-radius: 0.5rem;
+}
+
+/* Typography */
+
+body{
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    color: var(--base-color);
+}
+
+.accent{
+    color: var(--accent-color);
+}
+
+.container-intro{
+    color: var(--base-dark);
+}
+
+.container-subscribe, 
+.container-pros{
+    color: var(--base-light);
+    font-size: 14px;
+}
+
+.container-pros{
+    line-height: 1.5;
+}
+
+strong{
+    font-size: 2.5rem;
+}
+
+
+/* Container */
+body{
+    position: relative;
+    top: 100px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'intro intro'
+    'subscribe pros';
+    width: 650px;
+    margin: 0 auto;
+    border-radius: 2rem;
+}
+
+footer{
+    position: relative;
+    bottom: -100px;
+    text-align: center;
+}
+
+h1, h2{
+    margin: 0;
+}
+
+.container-intro{
+    grid-area: intro;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.container-subscribe{
+    grid-area: subscribe;
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.container-pros{
+    grid-area: pros;
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.container{
+    padding: 45px;
+}
+
+/* Background */
+body{
+    background-color: var(--base-light);
+}
+
+.container-intro{
+    background-color: white;
+}
+
+.container-subscribe{
+    background-color: var(--base-color);
+}
+
+.container-pros{
+    background-color: var(--base-twin);
+}
+
+button{
+    width: 230px;
+    height: 40px;
+    margin-top: 20px;
+    color: var(--base-light); 
+    font-weight: 900;
+    font-size: 1rem;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+/* Box Shadow */
+main, 
+button{
+    -webkit-box-shadow: 6px 7px 23px -8px rgba(145,146,156,1);
+    -moz-box-shadow: 6px 7px 23px -8px rgba(145,146,156,1);
+    box-shadow: 6px 7px 23px -8px rgba(145,146,156,1);
+}
